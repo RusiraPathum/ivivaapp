@@ -1,10 +1,11 @@
 import icon1 from "../icons/clear_filter.png";
 import icon2 from "../icons/reload_active.png";
 import React from "react";
-import "./tableWidget.css";
+import "./mainWidget.css";
 import TableData from "./TableData";
+import Search from "./Search";
 
-function TableWidget() {
+function MainWidget() {
 
   return (
     <div>
@@ -20,22 +21,15 @@ function TableWidget() {
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-6 search">
-                  <form className="form-inline my-2 my-lg-0">
-                    <input
-                      className="form-control mr-sm-2"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    ></input>
-                  </form>
+                <div className="col-6">
+                  <Search/>
                 </div>
                 <div className="col-6 icon-div">
                   <a className="filter-btn">
-                    <img src={icon1} />
+                    <img className="align-right" src={icon1} />
                   </a>
                   <a className="reload-btn">
-                    <img className="reload-img" src={icon2} />
+                    <img className="reload-img align-right" src={icon2} />
                   </a>
                 </div>
               </div>
@@ -51,4 +45,4 @@ function TableWidget() {
   );
 }
 
-export default TableWidget;
+export default MainWidget;

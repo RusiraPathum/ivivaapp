@@ -2,11 +2,13 @@ import icon1 from "../icons/clear_filter.png";
 import icon2 from "../icons/reload_active.png";
 import icon3 from "../icons/edit_pencil.png";
 import icon4 from "../icons/bell.png";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./tableData.css";
 import { sampleData } from "../data";
 
 function TableData() {
+
+  const [selectedRow, setSelectedRow] = useState(null);
   //check alarmed function
   let alarmedToRender;
 
@@ -18,7 +20,7 @@ function TableData() {
       case "1":
         alarmedToRender = (
           <td>
-            <img className="reload-img" src={icon4} />
+            <img className="reload-img align-right" src={icon4} />
           </td>
         );
         break;
@@ -66,7 +68,7 @@ function TableData() {
       case "0":
         readOnlyToRender = (
           <td>
-            <img className="reload-img" src={icon3} />
+            <img className="reload-img align-right" src={icon3} />
           </td>
         );
         break;
@@ -78,14 +80,24 @@ function TableData() {
     return readOnlyToRender;
   };
 
+  const handleRowMouseOver = (rowId) => {
+    setSelectedRow(rowId);
+  };
+
+  const handleRowMouseLeave = () => {
+    setSelectedRow(null);
+  };
+
   return (
-    <table class="table">
+    <div className="table-responsive">
+    <table className="table">
       <tbody>
         {sampleData.map((data, key) => {
           return (
-            <tr>
+            <tr className={selectedRow === data.PointKey ? 'selected-row' : ''}
+            onMouseOver={() => handleRowMouseOver(data.PointKey)}
+            onMouseLeave={handleRowMouseLeave}>
               {isCheckAlarmed(data.isAlarmed)}
-              <th scope="row">{data.isAlarmed}</th>
               <th scope="row">
                 {data.PointTemplateName} <br /> {data.EquipmentName}
               </th>
@@ -99,6 +111,7 @@ function TableData() {
         })}
       </tbody>
     </table>
+    </div>
   );
 }
 

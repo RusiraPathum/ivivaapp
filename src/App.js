@@ -1,10 +1,10 @@
 import './App.css';
-import TableWidget from './components/TableWidget';
+import MainWidget from './components/MainWidget';
 
 function App() {
   return (
     <div className="App">
-      <TableWidget/>
+      <MainWidget/>
     </div>
   );
 }
