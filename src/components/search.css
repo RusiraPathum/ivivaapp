@@ -1,0 +1,27 @@
+.search-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input[type="search"] {
+    padding-right: 30px; /* Add some space for the icon */
+  }
+  
+  .fa-search {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.363);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+.search{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.137);
+    border-radius: 20px;
+    width: 300px;
+    padding: 5px 20px;
+}
+
+.search:focus{
+    outline: none;
+}
