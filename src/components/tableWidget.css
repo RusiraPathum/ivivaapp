@@ -20,3 +20,18 @@
     height: 1px;
     background-color: blue;
 }
+.search{
+    padding-right: 20px;
+}
+.icon-div{
+    text-align: right;
+}
+.filter-btn{
+    padding: 5px;
+}
+.reload-btn{
+    padding: 5px;
+}
+.reload-img{
+    width: 20px;
+}

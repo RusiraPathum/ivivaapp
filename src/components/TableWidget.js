@@ -1,7 +1,11 @@
+import icon1 from "../icons/clear_filter.png";
+import icon2 from "../icons/reload_active.png";
 import React from "react";
 import "./tableWidget.css";
+import TableData from "./TableData";
 
 function TableWidget() {
+
   return (
     <div>
       <div className="row">
@@ -16,7 +20,7 @@ function TableWidget() {
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-6">
+                <div className="col-6 search">
                   <form className="form-inline my-2 my-lg-0">
                     <input
                       className="form-control mr-sm-2"
@@ -24,26 +28,20 @@ function TableWidget() {
                       placeholder="Search"
                       aria-label="Search"
                     ></input>
-                    <button
-                      className="btn btn-outline-success my-2 my-sm-0"
-                      type="submit"
-                    >
-                      Search
-                    </button>
                   </form>
                 </div>
-                <div className="col-6">
-                    
+                <div className="col-6 icon-div">
+                  <a className="filter-btn">
+                    <img src={icon1} />
+                  </a>
+                  <a className="reload-btn">
+                    <img className="reload-img" src={icon2} />
+                  </a>
                 </div>
               </div>
-              <h5 className="card-title">Special title treatment</h5>
-              <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
+              <div>
+                <TableData/>
+              </div>
             </div>
           </div>
         </div>
