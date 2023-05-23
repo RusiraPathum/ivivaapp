@@ -1,0 +1,22 @@
+.section-1 {
+    padding-top: 50px;
+}
+
+.card-header {
+    text-align: right;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+.card-header{
+    border-bottom: none;
+    background-color: white;
+}
+
+.bottom{
+    /* width: auto; */
+    height: 1px;
+    background-color: blue;
+}

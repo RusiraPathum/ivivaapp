@@ -1,13 +1,10 @@
 import './App.css';
+import TableWidget from './components/TableWidget';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+      <TableWidget/>
     </div>
   );
 }
